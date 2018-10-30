@@ -1,0 +1,11 @@
+applications:
+  - name: demo-service
+    path: /target/demo-0.0.1-SNAPSHOT.jar
+    memory: 1024M
+    instante: 1
+    buildpack: java_buildpack
+    random-route: true
+    services:
+      - configServer
+    env:
+      SPRING_PROFILES_ACTIVE: prod
